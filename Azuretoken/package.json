@@ -1,0 +1,36 @@
+{
+  "name": "azureadaccesstoken",
+  "version": "1.0.2",
+  "description": "Module to get Access Token from Azure AD with certificates",
+  "main": "lib/getAccessToken.js",
+  "types": "lib/getAccessToken.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --config jestconfig.json && rm -rf node_modules",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.2",
+    "@types/node": "^14.0.1"
+  },
+  "dependencies": {
+    "adal-node": "^0.2.1",
+    "pem": "^1.14.4"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
